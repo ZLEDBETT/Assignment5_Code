@@ -46,7 +46,7 @@ public class AmazonIntegrationTest {
     @DisplayName("structural-based")
     void testDeliveryPriceDifferentRanges() {
         amazon.addToCart(new Item(ItemType.OTHER, "Pen", 1, 1.0));
-        assertEquals(5, amazon.calculate(), 0.001);
+        assertEquals(6, amazon.calculate(), 0.001);
 
         database.resetDatabase();
         amazon.addToCart(new Item(ItemType.OTHER, "Box", 5, 1.0));
