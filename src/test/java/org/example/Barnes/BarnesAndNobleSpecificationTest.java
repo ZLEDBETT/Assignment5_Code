@@ -7,7 +7,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class BarnesAndNobleSpecificationTest {
 
-
     static class StubBookDatabase implements BookDatabase {
         private final Map<String, Book> books = new HashMap<>();
 
@@ -22,11 +21,9 @@ public class BarnesAndNobleSpecificationTest {
         }
     }
 
-
     static class StubBuyBookProcess implements BuyBookProcess {
         @Override
         public void buyBook(Book book, int amount) {
-            // no-op for testing
         }
     }
 

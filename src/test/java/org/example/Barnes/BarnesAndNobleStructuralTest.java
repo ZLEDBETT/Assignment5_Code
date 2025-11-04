@@ -7,7 +7,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class BarnesAndNobleStructuralTest {
 
-
     static class LimitedStockDatabase implements BookDatabase {
         private final Book limitedBook = new Book("999", 15, 2);
 
@@ -16,7 +15,6 @@ public class BarnesAndNobleStructuralTest {
             return limitedBook;
         }
     }
-
 
     static class RecordingBuyBookProcess implements BuyBookProcess {
         private final List<String> purchased = new ArrayList<>();
@@ -42,7 +40,6 @@ public class BarnesAndNobleStructuralTest {
         PurchaseSummary summary = store.getPriceForCart(order);
 
         Book expectedBook = db.findByISBN("999");
-
 
         assertEquals(2 * 15, summary.getTotalPrice());
         assertEquals(3, summary.getUnavailable().get(expectedBook));
