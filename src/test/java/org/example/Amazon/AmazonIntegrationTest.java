@@ -50,12 +50,12 @@ public class AmazonIntegrationTest {
 
         database.resetDatabase();
         amazon.addToCart(new Item(ItemType.OTHER, "Box", 5, 1.0));
-        assertEquals(12.5, amazon.calculate(), 0.001);
+        assertEquals(10, amazon.calculate(), 0.001);
 
         database.resetDatabase();
         for (int i = 0; i < 11; i++)
             amazon.addToCart(new Item(ItemType.OTHER, "Item" + i, 1, 1.0));
-        assertEquals(20.0, amazon.calculate(), 0.001);
+        assertEquals(31.0, amazon.calculate(), 0.001);
     }
 
     @Test

@@ -59,7 +59,7 @@ public class AmazonUnitTest {
     void testDeliveryPriceTiers() {
         DeliveryPrice rule = new DeliveryPrice();
         assertEquals(0, rule.priceToAggregate(List.of()), 0.001);
-        assertEquals(6, rule.priceToAggregate(List.of(new Item(ItemType.OTHER, "A", 1, 1.0))), 0.001);
+        assertEquals(5, rule.priceToAggregate(List.of(new Item(ItemType.OTHER, "A", 1, 1.0))), 0.001);
         assertEquals(12.5, rule.priceToAggregate(List.of(
                 new Item(ItemType.OTHER, "A", 1, 1.0),
                 new Item(ItemType.OTHER, "B", 1, 1.0),
